@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1726878642 source:c:\users\aluno\desktop\tad project\cubo.c
+	"cubo.h"
+
+1726878681 c:\users\aluno\desktop\tad project\cubo.h
+
+1726878930 source:c:\users\aluno\desktop\tad project\cilindro.c
+	"cilindro.h"
+
+1726878689 c:\users\aluno\desktop\tad project\cilindro.h
+
+1726879179 source:c:\users\aluno\desktop\tad project\main.c
+	<stdio.h>
+	<stdlib.h>
+	"cubo.h"
+	"cilindro.h"
+
