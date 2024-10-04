@@ -1,48 +1,47 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct No {
-    struct No* prox;
-    int chave;
-} No;
+typedef struct Elemento {
+    struct Elemento *prox;
+    int valor;
+} Elemento;
 
 typedef struct Lista {
-    No* ptlista;
+    Elemento *inicio;
 } Lista;
 
 Lista * criar_lista() {
-    Lista* nova = malloc(sizeof(Lista));
+    Lista *nova = malloc(sizeof(Lista));
 
     if(nova == NULL) {
         return NULL;
     }
 
-    nova->ptlista = NULL;
+    nova->inicio = NULL;
     return nova;
 }
 
-
-No* inserir(Lista* l, int valor) {
-    No* elemento, * aux;
+Elemento* inserir(Lista* l, int valor) {
+    Elemento *elemento, *aux;
 
     if(l == NULL) {
         return NULL;
     }
 
-     elemento = malloc(sizeof(No));
+     elemento = malloc(sizeof(Elemento));
 
     if(elemento == NULL) {
         return NULL;
     }
 
-    elemento->chave = valor;
+    elemento->valor = valor;
     elemento->prox = NULL;
 
-    if(l->ptlista == NULL) {
-        l->ptlista = elemento;
+    if(l->inicio == NULL) {
+        l->inicio = elemento;
         return elemento;
     } else {
-        aux = l->ptlista;
+        aux = l->inicio;
 
         while(aux->prox != NULL) {
             aux = aux->prox;
@@ -54,54 +53,54 @@ No* inserir(Lista* l, int valor) {
     return elemento;
 }
 
-No* insere_no_inicio(Lista* l, int valor) {
-    No *elemento, *aux;
+Elemento* inserir_inicio(Lista* l, int valor) {
+    Elemento *elemento, *aux;
 
     if (l == NULL) {
         return NULL;
     }
 
-    elemento = malloc(sizeof(No));
+    elemento = malloc(sizeof(Elemento));
 
     if (elemento == NULL) {
         return NULL;
     }
     
-    elemento->chave = valor;
+    elemento->valor = valor;
 
-    if (l->ptlista != NULL) {
-        elemento->prox = l->ptlista;
-        l->ptlista = elemento;
+    if (l->inicio != NULL) {
+        elemento->prox = l->inicio;
+        l->inicio = elemento;
         return elemento;
     } else {
         elemento->prox = NULL;
-        l->ptlista = elemento;
+        l->inicio = elemento;
         return elemento;
     }
 }
 
-No* insere_posicao(Lista* l, int valor, int posicao) {
-    No *elemento, *auxProx, *auxAtual, *aux;
+Elemento* insere_posicao(Lista* l, int valor, int posicao) {
+    Elemento *elemento, *auxProx, *auxAtual, *aux;
     int i = 1;
 
     if (l == NULL) {
         return NULL;
     }
 
-    elemento = malloc(sizeof(No));
+    elemento = malloc(sizeof(Elemento));
 
     if (elemento == NULL) {
         return NULL;
     }
 
-    elemento->chave = valor;
-    aux = l->ptlista;
+    elemento->valor = valor;
+    aux = l->inicio;
 
-    if(l->ptlista == NULL) {
+    if(l->inicio == NULL) {
         elemento->prox = NULL;
-        l->ptlista = elemento;
+        l->inicio = elemento;
     } else {
-        auxAtual = l->ptlista;
+        auxAtual = l->inicio;
 
         while(i < posicao && aux->prox != NULL) {
             aux = aux->prox;
@@ -112,15 +111,15 @@ No* insere_posicao(Lista* l, int valor, int posicao) {
     }
 }
 
-No *buscar_por_indice(Lista *l, int posicao){
-    No *aux;
+Elemento *buscar_por_indice(Lista *l, int posicao){
+    Elemento *aux;
     int count = 0;
 
     if(l == NULL){
         return NULL;
     }
 
-    aux = l->ptlista;
+    aux = l->inicio;
 
     while(count != posicao && aux->prox != NULL) {
         aux = aux->prox;
@@ -130,13 +129,61 @@ No *buscar_por_indice(Lista *l, int posicao){
     return aux;
 }
 
+void mostrar_lista(Lista *lista) {
+    Elemento *aux;
+
+    if (lista == NULL) {
+        return;
+    }
+
+    aux = lista->inicio;
+
+    printf("--- Mostrando Lista ---\n");
+    while(aux != NULL) {
+        printf("Valor: %d\n", aux->valor);
+        aux = aux->prox;
+    }
+}
+
+void removerDadoPorValor(Lista *lista, int valor) {
+    Elemento *auxProximo, *auxAnterior;
+
+    if (lista == NULL) {
+        return;
+    }
+
+    auxProximo = lista->inicio;
+
+    while(auxProximo->valor != valor) {
+        auxAnterior = auxProximo;
+        auxProximo = auxProximo->prox;
+
+        if(auxProximo == NULL) {
+            printf("O valor não existe na lista!\n");
+            return;
+        }
+    }
+
+    auxAnterior->prox = auxProximo->prox;
+    printf("Valor '%d' removido\n", auxProximo->valor);
+    free(auxProximo);
+}
+
+
 int main()
 {
     Lista* lista = criar_lista();
     inserir(lista, 1);
     inserir(lista, 2);
     insere_posicao(lista, 5, 1);
-    printf("%d\n", buscar_por_indice(lista, 1)->chave);
-    printf("%d\n", buscar_por_indice(lista, 2)->chave);
+    printf("Itens de busca por índice:\n");
+    printf("%d\n", buscar_por_indice(lista, 1)->valor);
+    printf("%d\n", buscar_por_indice(lista, 2)->valor);
+
+    mostrar_lista(lista);
+
+    printf("--- Removendo dado por valor ---\n");
+    removerDadoPorValor(lista, 5);
+    mostrar_lista(lista);
     return 0;
 }
