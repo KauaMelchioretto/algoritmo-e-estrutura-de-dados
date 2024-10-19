@@ -24,7 +24,7 @@ Fila* cria_fila() {
 }
 
 void inserir(Fila* fila, int dado) {
-    Elemento *elemento;
+    Elemento *elemento, *aux;
     
     if(fila == NULL) {
         return;
@@ -36,11 +36,14 @@ void inserir(Fila* fila, int dado) {
     
     if(fila->inicio == NULL) {
         fila->inicio = elemento;
-        fila->fim = elemento;
     } else {
-        fila->fim->prox = elemento;
+        aux = fila->fim;
+        aux->prox = elemento;
         fila->fim = elemento;
+        //fila->fim->prox = elemento; Isso aqui é bom por ser curto porém é mais difícil de entender
     }
+    
+    fila->fim = elemento;
 }
 
 void mostrar_fila(Fila* fila) {
@@ -58,12 +61,64 @@ void mostrar_fila(Fila* fila) {
     }
 }
 
-void remover(Fila* fila) {
- //implementar   
+int remover(Fila* fila) {
+    Elemento *aux;
+    int retorno = 0;
+    
+    if(fila == NULL) {
+        return 0;
+    }
+    
+    if(fila->inicio == NULL) {
+        return 0;    
+    }
+    
+    aux = fila->inicio;
+    fila->inicio = aux->prox;
+    retorno = aux->dado;
+    
+    free(aux);
+    
+    if(fila->inicio == NULL) {
+        fila->fim = NULL;  
+    }
+    
+    aux = NULL;
+    
+    return retorno;
+}
+
+int tamanho(Fila *fila) {
+    Elemento *aux;
+    int cont = 0;
+    
+    if(fila == NULL) {
+        return -1;
+    }
+    
+    if(fila->inicio == NULL) {
+        return 0;
+    }
+    
+    aux = fila->inicio;
+    cont++;
+    
+    while(aux->prox != NULL) {
+        aux = aux->prox;
+        cont++;
+    }
+    
+    return cont;
+}
+
+int destruir(Fila *fila) {
+    
 }
 
 int main() {
     Fila *fila;
+    int elementoRemovido;
+    
     printf("cria fila...\n");
     fila = cria_fila();
     printf("Fila criada...\n");
@@ -73,6 +128,18 @@ int main() {
     inserir(fila, 4);
     inserir(fila, 5);
     mostrar_fila(fila);
+    
+    elementoRemovido = remover(fila);
+    printf("Elemento removido: %d\n", elementoRemovido);
+ 
+    elementoRemovido = remover(fila);
+    printf("Elemento removido: %d\n", elementoRemovido);
+
+    printf("\nLista após remover:\n");
+    mostrar_fila(fila);
+    
+    int tamanhoLista = tamanho(fila);
+    printf("Tamanho: %d\n", tamanhoLista);
     printf("Hello World");
 
     return 0;
