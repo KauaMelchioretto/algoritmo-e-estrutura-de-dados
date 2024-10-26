@@ -39,7 +39,6 @@ void inserir(Fila* fila, int dado) {
     } else {
         aux = fila->fim;
         aux->prox = elemento;
-        fila->fim = elemento;
         //fila->fim->prox = elemento; Isso aqui é bom por ser curto porém é mais difícil de entender
     }
     
