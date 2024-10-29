@@ -162,24 +162,62 @@ int matarProcessoMaiorTempo(Fila* fila) {
     return idProcessoMorto;
 }
 
+Fila* intercalarFilas(Fila *fila1, Fila *fila2) {
+    if(fila1 == NULL || fila2 == NULL) {
+        printf("Uma das filas está nula\n");
+        return;
+    }
+
+    Fila *fila3 = criar_fila();
+
+    Process *aux1 = fila1->inicio;
+    Process *aux2 = fila2->inicio;
+    Process *aux3 = aux1;
+    fila3->inicio = aux3;
+    fila3->fim = aux3;
+
+    while(aux1 != NULL && aux2 != NULL) {
+        aux3->prox = aux1;
+        aux3->prox = aux2;
+        aux2 = aux2->prox;
+        aux1 = aux1->prox;
+    }
+
+    return fila3;
+}
+
 int main() {
-    Fila *fila;
-    
+    // Questão 3
+    Fila *fila1;
     printf("cria fila...\n");
-    fila = cria_fila();
+    fila1 = cria_fila();
     printf("Fila criada...\n");
-    inserir(fila);
-    inserir(fila);
-    inserir(fila);
-    mostrar_fila(fila);
-    int processoExecutado = executarProcesso(fila);
-    printf("Processo de ID '%d' executado com sucesso!\n", processoExecutado);
-    mostrar_fila(fila);
-    inserir(fila);
-    mostrar_fila(fila);
-    int idProcessoMorto = matarProcessoMaiorTempo(fila);
-    printf("Processo de ID '%d' morto por maior tempo de execução!\n", idProcessoMorto);
-    mostrar_fila(fila);
+    inserir(fila1);
+    inserir(fila1);
+    inserir(fila1);
+    // mostrar_fila(fila);
+    // int processoExecutado = executarProcesso(fila);
+    // printf("Processo de ID '%d' executado com sucesso!\n", processoExecutado);
+    // mostrar_fila(fila);
+    // inserir(fila);
+    // mostrar_fila(fila);
+    // int idProcessoMorto = matarProcessoMaiorTempo(fila);
+    // printf("Processo de ID '%d' morto por maior tempo de execução!\n", idProcessoMorto);
+    // mostrar_fila(fila);
+    
+    // Questão 4
+    Fila *fila2;
+    printf("cria fila 2...\n");
+    fila2 = cria_fila();
+    printf("Fila 2 criada...\n");
+    inserir(fila2);
+    inserir(fila2);
+    inserir(fila2);
+
+    Fila *fila3;
+    printf("cria fila 3...\n");
+    fila3 = intercalarFilas(fila1, fila2);
+    mostrar_fila(fila3);
     
     return 0;
 }
