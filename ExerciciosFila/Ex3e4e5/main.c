@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 typedef struct Process {
     int id;
@@ -44,6 +45,56 @@ void inserir(Fila* fila) {
     printf("Digite o tempo de execução do proceso\n");
     scanf("%d", &process->wait);
     
+    process->prox = NULL;
+    
+    if (fila->inicio == NULL) {
+        fila->inicio = process;
+    } else {
+        aux = fila->fim;
+        aux->prox = process;
+    }
+
+    fila->fim = process;
+    printf("Processo salvo com sucesso!\n");
+}
+
+void inserir_inicio(Fila *fila, int id, char nome[], int prioridade, int wait) {
+    if(fila == NULL) {
+        printf("Fila vazia ou nula!\n");
+        return;
+    }
+    Process *aux;
+    Process *novoProcesso = malloc(sizeof(Process));
+
+    novoProcesso->id = id;
+    strcpy(novoProcesso->name, nome);
+    novoProcesso->priority = prioridade;
+    novoProcesso->wait = wait;
+
+    aux = fila->inicio;
+
+    if(fila->inicio == NULL) {
+        novoProcesso->prox = NULL;
+        fila->inicio = novoProcesso;
+        fila->fim = novoProcesso;
+    } else {
+        novoProcesso->prox = fila->inicio;
+        fila->inicio = novoProcesso;
+    }
+}
+
+void inserirComInfo(Fila* fila, int id, char nome[], int prioridade, int wait) {
+    Process *process, *aux;
+
+    if(fila == NULL) {
+        return;
+    }
+    
+    process = malloc(sizeof(Process));
+    process->id = id;
+    strcpy(process->name, nome);
+    process->priority = prioridade;
+    process->wait = wait;
     process->prox = NULL;
     
     if (fila->inicio == NULL) {
@@ -143,7 +194,7 @@ int matarProcessoMaiorTempo(Fila* fila) {
         aux = aux->prox;
     }
 
-    if(anteriorMaiorTempo->wait == NULL) {
+    if(anteriorMaiorTempo->wait == 0) {
         printf("Não há processos com tempo maior do que 0 segundos de execução\n");
         fila->inicio = processoMaiorTempo->prox;
     } else {
@@ -165,26 +216,56 @@ int matarProcessoMaiorTempo(Fila* fila) {
 Fila* intercalarFilas(Fila *fila1, Fila *fila2) {
     if(fila1 == NULL || fila2 == NULL) {
         printf("Uma das filas está nula\n");
-        return;
+        return NULL;
     }
 
-    Fila *fila3 = criar_fila();
+    Fila *fila3 = cria_fila();
 
     Process *aux1 = fila1->inicio;
     Process *aux2 = fila2->inicio;
-    Process *aux3 = aux1;
-    fila3->inicio = aux3;
-    fila3->fim = aux3;
+    
+    while(aux1 != NULL || aux2 != NULL) {
+        if(aux1 != NULL) {
+            inserirComInfo(fila3, aux1->id, aux1->name, aux1->priority, aux1->wait);
+            aux1 = aux1->prox;
+        }
 
-    while(aux1 != NULL && aux2 != NULL) {
-        aux3->prox = aux1;
-        aux3->prox = aux2;
-        aux2 = aux2->prox;
-        aux1 = aux1->prox;
+        if(aux2 != NULL) {
+            inserirComInfo(fila3, aux2->id, aux2->name, aux2->priority, aux2->wait);
+            aux2 = aux2->prox;
+        }
     }
 
     return fila3;
 }
+
+Fila* inverteFila(Fila *fila) {
+    if(fila == NULL || fila->inicio == NULL) {
+        printf("A fila está nula!\n");
+        return NULL;
+    }
+
+    Fila *filaAux = cria_fila();
+    Process *aux = fila->inicio;
+
+    while(aux != NULL) {
+        inserir_inicio(filaAux, aux->id, aux->name, aux->priority, aux->wait);
+        aux = aux->prox;
+    }
+    aux = fila->inicio;
+
+    mostrar_fila(filaAux);
+
+    while(filaAux->inicio != aux->prox) {
+        aux = aux->prox;
+    }
+    aux->prox = NULL;
+    filaAux->fim = aux;
+    
+    return filaAux;
+}
+
+
 
 int main() {
     // Questão 3
@@ -212,12 +293,18 @@ int main() {
     printf("Fila 2 criada...\n");
     inserir(fila2);
     inserir(fila2);
-    inserir(fila2);
+ //   inserir(fila2);
 
     Fila *fila3;
     printf("cria fila 3...\n");
     fila3 = intercalarFilas(fila1, fila2);
     mostrar_fila(fila3);
-    
+
+    // Questão 5
+    Fila *fila4;
+    printf("Cria fila 4 (fila1 invertida)...\n");
+    fila4 = inverteFila(fila1);
+    mostrar_fila(fila4);
+
     return 0;
 }
