@@ -6,9 +6,18 @@ typedef struct Elemento{
     struct Elemento* prox;
 } Elemento;
 
-typedef struct Pilha{
+typedef struct ElementoReal {
+    float dado;
+    struct ElementoReal* prox;
+} ElementoReal;
+
+typedef struct Pilha {
     Elemento* topo;
-}Pilha;
+} Pilha;
+
+typedef struct PilhaReal {
+    ElementoReal* topo;
+} PilhaReal;
 
 // cria uma pilha com tamanho definido
 Pilha* criar_pilha();
@@ -25,6 +34,15 @@ int pop(Pilha* p);
 // retorna o tamanho da pilha (numero de elementos inseridos)
 int tamanho(Pilha* p);
 
+// Implementações de exercícios
 void mostrar_pilha(Pilha *p);
+void converte_pra_binario(int x);
+
+void push_char(Pilha *p, char operacao);
+void push_real(PilhaReal *pilha_real, float dado);
+float pop_real(PilhaReal *pilha_real);
+PilhaReal* criar_pilha_real();
+float calcula(PilhaReal *valores, Pilha *operacoes);
+void procura_carro(Pilha *pilha, int placa);
 
 #endif //PILHA_H
