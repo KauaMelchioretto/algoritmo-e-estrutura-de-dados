@@ -262,7 +262,7 @@ int main() {
     inserir(fila);
     mostrar_fila(fila);
     int qtdAvioes = qtdAvioesNaFila(fila);
-    printf("Aviões na fila: %d\n", qtdAvioes);
+    printf("Avioes na fila: %d\n", qtdAvioes);
     int vooAutorizado = autorizarDecolagem(fila);
     printf("Voo de N° %d autorizado para decolagem\n", vooAutorizado);
     listaPrimeiro(fila);

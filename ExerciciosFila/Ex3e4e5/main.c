@@ -42,7 +42,7 @@ void inserir(Fila* fila) {
     scanf("%s", process->name);
     printf("Digite a prioridade do processo\n");
     scanf("%d", &process->priority);
-    printf("Digite o tempo de execução do proceso\n");
+    printf("Digite o tempo de execucao do proceso\n");
     scanf("%d", &process->wait);
     
     process->prox = NULL;
@@ -119,7 +119,7 @@ void mostrar_fila(Fila* fila) {
     aux = fila->inicio;
     
     while(aux != NULL) {
-        printf("%d° da lista -> Processo de ID %d, Nome: %s, Prioridade: %d, Tempo execução: %d \n", count++, aux->id, aux->name, aux->priority, aux->wait);
+        printf("%d da lista -> Processo de ID %d, Nome: %s, Prioridade: %d, Tempo execucao: %d \n", count++, aux->id, aux->name, aux->priority, aux->wait);
         aux = aux->prox;
     }
 }
@@ -195,7 +195,7 @@ int matarProcessoMaiorTempo(Fila* fila) {
     }
 
     if(anteriorMaiorTempo->wait == 0) {
-        printf("Não há processos com tempo maior do que 0 segundos de execução\n");
+        printf("Nao ha processos com tempo maior do que 0 segundos de execucao\n");
         fila->inicio = processoMaiorTempo->prox;
     } else {
         anteriorMaiorTempo->prox = processoMaiorTempo->prox;
@@ -215,7 +215,7 @@ int matarProcessoMaiorTempo(Fila* fila) {
 
 Fila* intercalarFilas(Fila *fila1, Fila *fila2) {
     if(fila1 == NULL || fila2 == NULL) {
-        printf("Uma das filas está nula\n");
+        printf("Uma das filas esta nula\n");
         return NULL;
     }
 
@@ -241,7 +241,7 @@ Fila* intercalarFilas(Fila *fila1, Fila *fila2) {
 
 Fila* inverteFila(Fila *fila) {
     if(fila == NULL || fila->inicio == NULL) {
-        printf("A fila está nula!\n");
+        printf("A fila esta nula!\n");
         return NULL;
     }
 
@@ -252,15 +252,6 @@ Fila* inverteFila(Fila *fila) {
         inserir_inicio(filaAux, aux->id, aux->name, aux->priority, aux->wait);
         aux = aux->prox;
     }
-    aux = fila->inicio;
-
-    mostrar_fila(filaAux);
-
-    while(filaAux->inicio != aux->prox) {
-        aux = aux->prox;
-    }
-    aux->prox = NULL;
-    filaAux->fim = aux;
     
     return filaAux;
 }
@@ -276,15 +267,15 @@ int main() {
     inserir(fila1);
     inserir(fila1);
     inserir(fila1);
-    // mostrar_fila(fila);
-    // int processoExecutado = executarProcesso(fila);
-    // printf("Processo de ID '%d' executado com sucesso!\n", processoExecutado);
-    // mostrar_fila(fila);
-    // inserir(fila);
-    // mostrar_fila(fila);
-    // int idProcessoMorto = matarProcessoMaiorTempo(fila);
-    // printf("Processo de ID '%d' morto por maior tempo de execução!\n", idProcessoMorto);
-    // mostrar_fila(fila);
+    mostrar_fila(fila1);
+    int processoExecutado = executarProcesso(fila1);
+    printf("Processo de ID '%d' executado com sucesso!\n", processoExecutado);
+    mostrar_fila(fila1);
+    inserir(fila1);
+    mostrar_fila(fila1);
+    int idProcessoMorto = matarProcessoMaiorTempo(fila1);
+    printf("Processo de ID '%d' morto por maior tempo de execução!\n", idProcessoMorto);
+    mostrar_fila(fila1);
     
     // Questão 4
     Fila *fila2;
@@ -293,7 +284,7 @@ int main() {
     printf("Fila 2 criada...\n");
     inserir(fila2);
     inserir(fila2);
- //   inserir(fila2);
+   inserir(fila2);
 
     Fila *fila3;
     printf("cria fila 3...\n");
