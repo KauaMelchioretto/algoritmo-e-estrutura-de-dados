@@ -44,5 +44,9 @@ float pop_real(PilhaReal *pilha_real);
 PilhaReal* criar_pilha_real();
 float calcula(PilhaReal *valores, Pilha *operacoes);
 void procura_carro(Pilha *pilha, int placa);
+void valida_pilha_igual(Pilha *pilha1, Pilha *pilha2);
+void pilha_maior(Pilha *pilha1, Pilha *pilha2);
+void inverte_pilha(Pilha *pilha);
+void imprime_pilha_reversa(PilhaReal *pilha);
 
 #endif //PILHA_H
