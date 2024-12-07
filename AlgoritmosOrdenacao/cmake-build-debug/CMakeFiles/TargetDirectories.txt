@@ -1,0 +1,3 @@
+C:/Users/KauaMelchioretto/OneDrive/Desktop/coisas/trabalhos ADS/AED/algoritmo-e-estrutura-de-dados/AlgoritmosOrdenacao/cmake-build-debug/CMakeFiles/AlgoritmosOrdenacao.dir
+C:/Users/KauaMelchioretto/OneDrive/Desktop/coisas/trabalhos ADS/AED/algoritmo-e-estrutura-de-dados/AlgoritmosOrdenacao/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/KauaMelchioretto/OneDrive/Desktop/coisas/trabalhos ADS/AED/algoritmo-e-estrutura-de-dados/AlgoritmosOrdenacao/cmake-build-debug/CMakeFiles/rebuild_cache.dir

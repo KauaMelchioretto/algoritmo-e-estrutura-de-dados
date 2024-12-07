@@ -1,0 +1,3 @@
+C:/Users/KauaMelchioretto/OneDrive/Desktop/coisas/trabalhos ADS/AED/algoritmo-e-estrutura-de-dados/Arvore/cmake-build-debug/CMakeFiles/Arvore.dir
+C:/Users/KauaMelchioretto/OneDrive/Desktop/coisas/trabalhos ADS/AED/algoritmo-e-estrutura-de-dados/Arvore/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/KauaMelchioretto/OneDrive/Desktop/coisas/trabalhos ADS/AED/algoritmo-e-estrutura-de-dados/Arvore/cmake-build-debug/CMakeFiles/rebuild_cache.dir

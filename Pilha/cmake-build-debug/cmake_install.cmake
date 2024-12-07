@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/KauaMelchioretto/Desktop/coisas/trabalhos ADS/AED/algoritmo-e-estrutura-de-dados/Pilha
+# Install script for directory: C:/Users/KauaMelchioretto/OneDrive/Desktop/coisas/trabalhos ADS/AED/algoritmo-e-estrutura-de-dados/Pilha
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/KauaMelchioretto/Desktop/coisas/trabalhos ADS/AED/algoritmo-e-estrutura-de-dados/Pilha/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/KauaMelchioretto/OneDrive/Desktop/coisas/trabalhos ADS/AED/algoritmo-e-estrutura-de-dados/Pilha/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

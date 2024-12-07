@@ -1,0 +1,7 @@
+# ninja log v6
+5	268	7552278420127842	CMakeFiles/AlgoritmosOrdenacao.dir/main.c.obj	d4f4f93a1df5aa23
+13	348	7552278420197642	CMakeFiles/AlgoritmosOrdenacao.dir/lista.c.obj	4c3adb6fcd1476dd
+348	726	7552278423555509	AlgoritmosOrdenacao.exe	fd443b59817695ec
+21	279	7552289154080367	CMakeFiles/AlgoritmosOrdenacao.dir/lista.c.obj	4c3adb6fcd1476dd
+13	290	7552289154002842	CMakeFiles/AlgoritmosOrdenacao.dir/main.c.obj	d4f4f93a1df5aa23
+291	625	7552289156771047	AlgoritmosOrdenacao.exe	fd443b59817695ec

@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "Pilha",
+					"name" : "Arvore",
 					"targetIndexes" : 
 					[
 						0
@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "Pilha::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Pilha-Debug-9b895b4131eb366788fb.json",
-					"name" : "Pilha",
+					"id" : "Arvore::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Arvore-Debug-e4b3471ff6b4b96bdd11.json",
+					"name" : "Arvore",
 					"projectIndex" : 0
 				}
 			]
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/KauaMelchioretto/Desktop/coisas/trabalhos ADS/AED/algoritmo-e-estrutura-de-dados/Pilha/cmake-build-debug",
-		"source" : "C:/Users/KauaMelchioretto/Desktop/coisas/trabalhos ADS/AED/algoritmo-e-estrutura-de-dados/Pilha"
+		"build" : "C:/Users/KauaMelchioretto/OneDrive/Desktop/coisas/trabalhos ADS/AED/algoritmo-e-estrutura-de-dados/Arvore/cmake-build-debug",
+		"source" : "C:/Users/KauaMelchioretto/OneDrive/Desktop/coisas/trabalhos ADS/AED/algoritmo-e-estrutura-de-dados/Arvore"
 	},
 	"version" : 
 	{
