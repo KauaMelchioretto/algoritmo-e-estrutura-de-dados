@@ -67,6 +67,97 @@ void preencherListaDecrescente(Lista *l, int n) {
     }
 }
 
+
+void preencherListaAleatoria(Lista *l, int n) {
+    if(l == NULL) {
+        return;
+    }
+
+    for(int i = 0; i < n; i++) {
+        Elemento *elemento, *aux;
+        elemento = malloc(sizeof(Elemento));
+        elemento->valor = rand() % 10000;
+        elemento->prox = NULL;
+
+        if(l->inicio == NULL) {
+            l->inicio = elemento;
+        } else {
+            aux = l->inicio;
+
+            while(aux->prox != NULL) {
+                aux = aux->prox;
+            }
+
+            aux->prox = elemento;
+        }
+    }
+}
+
+void swap(Elemento *x, Elemento *y) {
+    int temp = x->valor;
+    x->valor = y->valor;
+    y->valor = temp;
+}
+
+Lista* bubbleSort(Lista *l) {
+    if(l == NULL || l->inicio == NULL) {
+        printf("Lista nula ou vazia!\n");
+        return NULL;
+    }
+
+    printf("******* BUBBLE SORT *******\n");
+
+    Elemento *aux;
+    Elemento *limite = NULL;
+    int swapped = 1;
+
+    while(swapped) {
+        aux = l->inicio;
+        swapped = 0;
+
+        while(aux->prox != limite) {
+            if(aux->valor > aux->prox->valor) {
+                swap(aux, aux->prox);
+                swapped = 1;
+            }
+
+            aux = aux->prox;
+        }
+
+        limite = aux;
+    }
+
+    return l;
+}
+
+Lista* selectionSort(Lista *l) {
+    if(l == NULL || l->inicio == NULL) {
+        printf("Lista nula ou vazia!\n");
+        return  NULL;
+    }
+
+    printf("******* SELECTION SORT *******\n");
+    Elemento *aux = l->inicio;
+
+    while(aux->prox != NULL) {
+        Elemento *menor = aux;
+        Elemento *temp = aux->prox;
+
+        while(temp != NULL) {
+            if(temp->valor < menor->valor) {
+                menor = temp;
+            }
+
+            temp = temp->prox;
+        }
+
+        swap(aux, menor);
+        aux = aux->prox;
+    }
+
+    return l;
+}
+
 void mostrar_lista(Lista *lista) {
     Elemento *aux;
 
