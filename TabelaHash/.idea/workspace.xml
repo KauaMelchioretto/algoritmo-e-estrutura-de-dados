@@ -7,11 +7,10 @@
     <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
     <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
     <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
-    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexRemoved" />
   </component>
-  <component name="CMakePresetLoader"><![CDATA[{
-  "useNewFormat": true
-}]]></component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
   <component name="CMakeProjectFlavorService">
     <option name="flavorId" value="CMakePlainProjectFlavor" />
   </component>
@@ -30,27 +29,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01a6fb14-8696-4391-98aa-7593914222ff" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tabelahash.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tabelahash.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AlgoritmosOrdenacao/cmake-build-debug/.cmake/api/v1/reply/cache-v2-3e6a36e3bd2b4056447a.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AlgoritmosOrdenacao/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-68133ba34134adee25c9.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AlgoritmosOrdenacao/cmake-build-debug/.cmake/api/v1/reply/index-2024-12-06T22-23-33-0794.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AlgoritmosOrdenacao/cmake-build-debug/AlgoritmosOrdenacao.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../AlgoritmosOrdenacao/cmake-build-debug/AlgoritmosOrdenacao.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AlgoritmosOrdenacao/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../AlgoritmosOrdenacao/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AlgoritmosOrdenacao/cmake-build-debug/CMakeFiles/3.29.6/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../AlgoritmosOrdenacao/cmake-build-debug/CMakeFiles/3.29.6/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AlgoritmosOrdenacao/cmake-build-debug/CMakeFiles/3.29.6/CompilerIdC/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../AlgoritmosOrdenacao/cmake-build-debug/CMakeFiles/3.29.6/CompilerIdC/a.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AlgoritmosOrdenacao/cmake-build-debug/CMakeFiles/AlgoritmosOrdenacao.dir/lista.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../AlgoritmosOrdenacao/cmake-build-debug/CMakeFiles/AlgoritmosOrdenacao.dir/lista.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AlgoritmosOrdenacao/cmake-build-debug/CMakeFiles/AlgoritmosOrdenacao.dir/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../AlgoritmosOrdenacao/cmake-build-debug/CMakeFiles/AlgoritmosOrdenacao.dir/main.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AlgoritmosOrdenacao/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../AlgoritmosOrdenacao/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AlgoritmosOrdenacao/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../AlgoritmosOrdenacao/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AlgoritmosOrdenacao/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../AlgoritmosOrdenacao/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AlgoritmosOrdenacao/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AlgoritmosOrdenacao/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../AlgoritmosOrdenacao/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AlgoritmosOrdenacao/lista.c" beforeDir="false" afterPath="$PROJECT_DIR$/../AlgoritmosOrdenacao/lista.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AlgoritmosOrdenacao/lista.h" beforeDir="false" afterPath="$PROJECT_DIR$/../AlgoritmosOrdenacao/lista.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AlgoritmosOrdenacao/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../AlgoritmosOrdenacao/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-45765943a209b0557756.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-12-07T21-56-12-0819.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,9 +58,9 @@
     <option name="minorVersion" value="2.3" />
     <option name="productBranch" value="Classic" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2puG7Glr63CL52qXoSDXQZ1Yf4L" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -88,6 +76,7 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/KauaMelchioretto/OneDrive/Desktop/coisas/trabalhos ADS/AED/algoritmo-e-estrutura-de-dados/AlgoritmosOrdenacao",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -97,12 +86,12 @@
   }
 }]]></component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="TabelaHash" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="TabelaHash" TARGET_NAME="TabelaHash" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="TabelaHash" RUN_TARGET_NAME="TabelaHash">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TabelaHash" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="TabelaHash" TARGET_NAME="TabelaHash" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="TabelaHash" RUN_TARGET_NAME="TabelaHash">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -117,6 +106,7 @@
       <option name="presentableId" value="Default" />
       <updated>1733608377874</updated>
       <workItem from="1733608379609" duration="3263000" />
+      <workItem from="1733881167712" duration="391000" />
     </task>
     <servers />
   </component>

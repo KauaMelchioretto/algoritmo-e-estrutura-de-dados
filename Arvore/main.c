@@ -10,6 +10,10 @@ int main(void)
     inserir(arvore, 4);
     inserir(arvore, 3);
     inserir(arvore, 5);
+    printf("Elemento %d encontrado \n", buscar_no_arvore(arvore, 10));
+    remover_no(arvore->raiz, 2);
+    imprimir_simetrica(arvore->raiz);
+
 
     return 0;
 }
